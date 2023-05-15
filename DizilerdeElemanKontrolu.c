@@ -2,19 +2,11 @@
 #include <stdlib.h>
 #define MAX_BOYUT 200
 
-/*
-	1.SORU 
-a) Dizinin boyutunu ve elemanlarını kullanıcıdan isteyiniz.
-b) Dizide aranacak olan elemanı kullanıcıdan isteyiniz.
-c) Aranılan elemanın dizide olup olmadığının kontrolünü Linear Search kullanarak yapınız.
-
-*/
-
 int main() {
 	
-	int dizi[MAX_BOYUT]; // Burada global değişken kullanılmasının nedeni dizi içine yazılacak değerlerin boyutunun belirlenmesidir.
+	int dizi[MAX_BOYUT]; // Burada global deÄŸiÅŸken kullanÄ±lmasÄ±nÄ±n nedeni dizi iÃ§ine yazÄ±lacak deÄŸerlerin boyutunun belirlenmesidir.
 	int boyut,a;
-	int yanit,key; // Burada kullanılan yanıt dizi içerinde elemanın varlığının kontrolü içindir.
+	int yanit,key; // Burada kullanÄ±lan yanÄ±t dizi iÃ§erinde elemanÄ±n varlÄ±ÄŸÄ±nÄ±n kontrolÃ¼ iÃ§indir.
 	
 	printf("Lutfen dizinin boyutunu giriniz: ");
 	scanf("%d",&boyut);
@@ -29,17 +21,17 @@ int main() {
 	printf("\n");
 	
 	printf("Dizi icerisinde aranmasi istenen eleman:");
-	scanf("%d",&key); // Burada kullanılan key değişkeni yani anahtar değişkenle kullanıcıdan alınan eleman saklanır.
+	scanf("%d",&key); // Burada kullanÄ±lan key deÄŸiÅŸkeni yani anahtar deÄŸiÅŸkenle kullanÄ±cÄ±dan alÄ±nan eleman saklanÄ±r.
 	
 	for(a=0 ;a < boyut ;a++ ){
 		if(dizi[a]==key){
 			printf("%d sayisi,dizinin %d. elemanidir.",key,a);
-			yanit =1; //Elemanin bulunduğu anlamına gelir.
-			break; //if döngüsü içerisinde çıkmaya yarar.
+			yanit =1; //Elemanin bulunduÄŸu anlamÄ±na gelir.
+			break; //if dÃ¶ngÃ¼sÃ¼ iÃ§erisinde Ã§Ä±kmaya yarar.
 		}
 	}
 	
-	if(!yanit){ //burada ! işareti tersi anlamına gelir yani eleman bulunamadı demektir.
+	if(!yanit){ //burada ! iÅŸareti tersi anlamÄ±na gelir yani eleman bulunamadÄ± demektir.
 		printf("%d sayisi,dizide bulunamadi",key);
 	}
 	
